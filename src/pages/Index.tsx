@@ -1,12 +1,27 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import StarsBackground from '@/components/StarsBackground';
+import Navbar from '@/components/Navbar';
+import HeroSection from '@/components/HeroSection';
+import NicheShowcase from '@/components/NicheShowcase';
+import BentoGrid from '@/components/BentoGrid';
+import ProcessTimeline from '@/components/ProcessTimeline';
+import PricingSection from '@/components/PricingSection';
+import CTASection from '@/components/CTASection';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="relative min-h-screen bg-background overflow-x-hidden">
+      <StarsBackground />
+      <Navbar />
+      <main className="relative z-10">
+        <HeroSection />
+        <NicheShowcase />
+        <BentoGrid />
+        <ProcessTimeline />
+        <PricingSection />
+        <CTASection />
+      </main>
+      <Footer />
     </div>
   );
 };
