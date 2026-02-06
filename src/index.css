@@ -16,10 +16,9 @@
     --popover: 248 60% 6%;
     --popover-foreground: 0 0% 100%;
 
-    /* Electric Purple */
-    --primary: 263 70% 50%;
+    /* Electric Purple - Intenso */
+    --primary: 270 100% 60%;
     --primary-foreground: 0 0% 100%;
-
     /* Neon Cyan */
     --secondary: 187 94% 52%;
     --secondary-foreground: 248 100% 3%;
@@ -27,7 +26,7 @@
     --muted: 248 40% 12%;
     --muted-foreground: 240 5% 65%;
 
-    --accent: 263 70% 50%;
+    --accent: 270 100% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -35,35 +34,35 @@
 
     --border: 248 40% 15%;
     --input: 248 40% 15%;
-    --ring: 263 70% 50%;
+    --ring: 270 100% 60%;
 
     --radius: 0.75rem;
 
     /* Custom Design Tokens */
     --deep-space: 248 100% 3%;
-    --electric-purple: 263 70% 50%;
+    --electric-purple: 270 100% 60%;
     --neon-cyan: 187 94% 52%;
     --glass-bg: 248 60% 8%;
     --glass-border: 248 40% 20%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(263 70% 50%) 0%, hsl(187 94% 52%) 100%);
-    --gradient-glow: linear-gradient(90deg, hsl(263 70% 50%), hsl(187 94% 52%), hsl(263 70% 50%));
-    --gradient-text: linear-gradient(90deg, hsl(263 70% 60%), hsl(187 94% 52%), hsl(263 70% 60%));
+    --gradient-primary: linear-gradient(135deg, hsl(270 100% 60%) 0%, hsl(187 94% 52%) 100%);
+    --gradient-glow: linear-gradient(90deg, hsl(270 100% 60%), hsl(187 94% 52%), hsl(270 100% 60%));
+    --gradient-text: linear-gradient(90deg, hsl(270 100% 65%), hsl(187 94% 52%), hsl(270 100% 65%));
     
     /* Shadows & Glows */
-    --glow-purple: 0 0 40px hsl(263 70% 50% / 0.4);
+    --glow-purple: 0 0 40px hsl(270 100% 60% / 0.5);
     --glow-cyan: 0 0 40px hsl(187 94% 52% / 0.4);
-    --glow-mixed: 0 0 60px hsl(263 70% 50% / 0.3), 0 0 100px hsl(187 94% 52% / 0.2);
+    --glow-mixed: 0 0 60px hsl(270 100% 60% / 0.4), 0 0 100px hsl(187 94% 52% / 0.2);
 
     --sidebar-background: 248 60% 6%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 263 70% 50%;
+    --sidebar-primary: 270 100% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 248 40% 12%;
     --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 248 40% 15%;
-    --sidebar-ring: 263 70% 50%;
+    --sidebar-ring: 270 100% 60%;
   }
 }
 
@@ -115,20 +114,20 @@
   /* Glow Button */
   .glow-button {
     @apply relative px-8 py-4 rounded-xl font-semibold text-white transition-all duration-300;
-    background: linear-gradient(135deg, hsl(263 70% 50%) 0%, hsl(263 70% 40%) 100%);
-    box-shadow: 0 0 30px hsl(263 70% 50% / 0.4), 0 0 60px hsl(263 70% 50% / 0.2);
+    background: linear-gradient(135deg, hsl(270 100% 60%) 0%, hsl(270 100% 45%) 100%);
+    box-shadow: 0 0 30px hsl(270 100% 60% / 0.5), 0 0 60px hsl(270 100% 60% / 0.3);
   }
 
   .glow-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 40px hsl(263 70% 50% / 0.6), 0 0 80px hsl(263 70% 50% / 0.3);
+    box-shadow: 0 0 50px hsl(270 100% 60% / 0.7), 0 0 100px hsl(270 100% 60% / 0.4);
   }
 
   .glow-button::before {
     content: '';
     position: absolute;
     inset: -2px;
-    background: linear-gradient(135deg, hsl(263 70% 50%), hsl(187 94% 52%));
+    background: linear-gradient(135deg, hsl(270 100% 60%), hsl(187 94% 52%));
     border-radius: inherit;
     z-index: -1;
     opacity: 0;
@@ -141,7 +140,7 @@
 
   /* Gradient Text */
   .gradient-text {
-    background: linear-gradient(90deg, hsl(263 70% 60%), hsl(187 94% 52%), hsl(263 70% 60%));
+    background: linear-gradient(90deg, hsl(270 100% 65%), hsl(187 94% 52%), hsl(270 100% 65%));
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
@@ -163,7 +162,7 @@
     content: '';
     position: absolute;
     inset: -2px;
-    background: linear-gradient(135deg, hsl(263 70% 50%), hsl(187 94% 52%));
+    background: linear-gradient(135deg, hsl(270 100% 60%), hsl(187 94% 52%));
     border-radius: inherit;
     z-index: -1;
     animation: pulse-glow 2s ease-in-out infinite;
@@ -186,7 +185,7 @@
     height: 200px;
     background: radial-gradient(
       circle,
-      hsl(263 70% 50% / 0.3) 0%,
+      hsl(270 100% 60% / 0.4) 0%,
       transparent 70%
     );
     pointer-events: none;
@@ -204,12 +203,12 @@
     height: 2px;
     background: linear-gradient(90deg, 
       transparent, 
-      hsl(263 70% 50%), 
+      hsl(270 100% 60%), 
       hsl(187 94% 52%), 
-      hsl(263 70% 50%), 
+      hsl(270 100% 60%), 
       transparent
     );
-    box-shadow: 0 0 10px hsl(263 70% 50% / 0.5), 0 0 20px hsl(187 94% 52% / 0.3);
+    box-shadow: 0 0 10px hsl(270 100% 60% / 0.6), 0 0 20px hsl(187 94% 52% / 0.4);
   }
 
   /* Grid Background */
@@ -226,7 +225,7 @@
   }
 
   .icon-glow:hover {
-    filter: drop-shadow(0 0 10px hsl(187 94% 52%)) drop-shadow(0 0 20px hsl(263 70% 50% / 0.5));
+    filter: drop-shadow(0 0 10px hsl(187 94% 52%)) drop-shadow(0 0 20px hsl(270 100% 60% / 0.6));
   }
 }
 
