@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Scissors, Stethoscope, Scale, UtensilsCrossed, ChevronLeft, ChevronRight, X, ExternalLink } from 'lucide-react';
+import { Scissors, Stethoscope, Scale, UtensilsCrossed, ChevronLeft, ChevronRight, X, ExternalLink, Building2, Dumbbell, Sparkles, GraduationCap } from 'lucide-react';
 
 const niches = [
   {
@@ -46,6 +46,50 @@ const niches = [
     description: 'Cardápios digitais e sistemas de delivery completos',
     features: ['Cardápio Digital', 'Pedidos Online', 'Sistema de Reservas', 'Integração iFood'],
     mockupImage: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
+  },
+  {
+    id: 'imobiliaria',
+    name: 'Imobiliária',
+    icon: Building2,
+    color: 'from-cyan-500 to-blue-600',
+    bgGradient: 'from-cyan-900/40 via-blue-900/30 to-slate-900/50',
+    accentColor: 'cyan',
+    description: 'Portais imobiliários com busca avançada e tour virtual',
+    features: ['Catálogo de Imóveis', 'Busca com Filtros', 'Tour Virtual 360°', 'Simulador de Financiamento'],
+    mockupImage: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80',
+  },
+  {
+    id: 'fitness',
+    name: 'Academia',
+    icon: Dumbbell,
+    color: 'from-purple-500 to-pink-600',
+    bgGradient: 'from-purple-900/40 via-pink-900/30 to-slate-900/50',
+    accentColor: 'purple',
+    description: 'Sites energéticos para academias e personal trainers',
+    features: ['Planos e Mensalidades', 'Agendamento de Aulas', 'Área do Aluno', 'Treinos Online'],
+    mockupImage: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80',
+  },
+  {
+    id: 'estetica',
+    name: 'Estética',
+    icon: Sparkles,
+    color: 'from-pink-500 to-rose-600',
+    bgGradient: 'from-pink-900/40 via-rose-900/30 to-slate-900/50',
+    accentColor: 'pink',
+    description: 'Sites elegantes para clínicas de estética e spas',
+    features: ['Catálogo de Serviços', 'Antes e Depois', 'Agendamento Online', 'Pacotes Promocionais'],
+    mockupImage: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80',
+  },
+  {
+    id: 'educacao',
+    name: 'Educação',
+    icon: GraduationCap,
+    color: 'from-yellow-500 to-orange-600',
+    bgGradient: 'from-yellow-900/40 via-orange-900/30 to-slate-900/50',
+    accentColor: 'yellow',
+    description: 'Plataformas para escolas, cursos e professores',
+    features: ['Área do Aluno', 'Aulas Online', 'Material Didático', 'Certificados Digitais'],
+    mockupImage: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80',
   },
 ];
 
