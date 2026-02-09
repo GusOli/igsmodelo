@@ -86,13 +86,13 @@ const CTASection = () => {
           </h2>
 
           <p className="text-muted-foreground text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-            Cada dia sem presença digital é um cliente que você perde. 
+            Cada dia sem presença digital é um cliente que você perde.
             Comece hoje e transforme visitantes em fãs da sua marca.
           </p>
 
           {/* CTA Button */}
           <motion.a
-            href="https://wa.me/5511999999999"
+            href="https://wa.me/5544997378636?text=Olá! Gostaria de iniciar um projeto agora."
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}

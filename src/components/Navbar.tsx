@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import logo from '@/assets/logo.png';
+import logo from '@/assets/logo-igs.jpg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
     { name: 'Modelos', href: '#showcase' },
+    { name: 'Modelos', href: '#showcase' },
     { name: 'Vantagens', href: '#vantagens' },
     { name: 'Processo', href: '#processo' },
-    { name: 'Preços', href: '#precos' },
   ];
 
   return (
@@ -47,7 +47,9 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <a
-              href="#contato"
+              href="https://wa.me/5544997378636?text=Olá! Gostaria de iniciar um projeto."
+              target="_blank"
+              rel="noopener noreferrer"
               className="glow-button text-sm px-6 py-2"
             >
               Iniciar Projeto
@@ -84,7 +86,9 @@ const Navbar = () => {
                   </a>
                 ))}
                 <a
-                  href="#contato"
+                  href="https://wa.me/5544997378636?text=Olá! Gostaria de iniciar um projeto."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="glow-button block text-center text-sm px-6 py-3 mt-4"
                 >
                   Iniciar Projeto

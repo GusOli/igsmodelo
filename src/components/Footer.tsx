@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
-import logo from '@/assets/logo.png';
+import { Instagram, Mail, MapPin, Phone } from 'lucide-react';
+import logo from '@/assets/logo-igs.jpg';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,15 +19,17 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-muted-foreground text-sm max-w-sm mb-6">
-              Transformando negócios locais em marcas digitais de sucesso. 
+              Transformando negócios locais em marcas digitais de sucesso.
               Sites premium que convertem visitantes em clientes.
             </p>
             {/* Social Links */}
             <div className="flex gap-3">
-              {[Instagram, Linkedin].map((Icon, i) => (
+              {[Instagram].map((Icon, i) => (
                 <motion.a
                   key={i}
-                  href="#"
+                  href="https://www.instagram.com/igs_solution/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   className="p-2.5 glass-card hover:border-primary/50 transition-colors"
@@ -61,15 +63,19 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone size={14} className="text-secondary" />
-                (11) 99999-9999
+                (44) 99973-7863
+              </li>
+              <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Phone size={14} className="text-secondary" />
+                (44) 99995-0636
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Mail size={14} className="text-secondary" />
-                contato@igs.digital
+                igs.soluccoes2@gmail.com
               </li>
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <MapPin size={14} className="text-secondary mt-0.5" />
-                São Paulo, SP - Brasil
+                Maringá, PR - Brasil
               </li>
             </ul>
           </div>

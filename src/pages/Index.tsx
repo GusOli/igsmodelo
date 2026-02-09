@@ -6,7 +6,6 @@ import BentoGrid from '@/components/BentoGrid';
 import ProcessTimeline from '@/components/ProcessTimeline';
 import TrustSection from '@/components/TrustSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
-import PricingSection from '@/components/PricingSection';
 import FAQSection from '@/components/FAQSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
@@ -23,7 +22,6 @@ const Index = () => {
         <ProcessTimeline />
         <TrustSection />
         <TestimonialsSection />
-        <PricingSection />
         <FAQSection />
         <CTASection />
       </main>

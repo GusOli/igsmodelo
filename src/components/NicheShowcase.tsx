@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Scissors, Stethoscope, Scale, UtensilsCrossed, ChevronLeft, ChevronRight, X, ExternalLink, Building2, Dumbbell, Sparkles, GraduationCap, Brain, Cigarette, Shirt } from 'lucide-react';
+import { Scissors, Stethoscope, Scale, UtensilsCrossed, ChevronLeft, ChevronRight, X, ExternalLink, Building2, Dumbbell, Sparkles, GraduationCap, Flame, ShoppingBag, Brain } from 'lucide-react';
+import tabacariaImg from '@/assets/tabacaria.png';
+import roupasImg from '@/assets/roupas.png';
+import psicologiaImg from '@/assets/psicologia.png';
 
 const niches = [
   {
@@ -13,43 +16,103 @@ const niches = [
     description: 'Sites modernos para barbearias e salões de beleza masculino',
     features: ['Agendamento Online 24/7', 'Galeria de Cortes', 'Preços Dinâmicos', 'Avaliações de Clientes'],
     mockupImage: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&q=80',
-    previewUrl: 'https://modelobarber.lovable.app',
+    previewUrl: 'https://modelobarber.vercel.app/',
+  },
+  {
+    id: 'advocacia',
+    name: 'Advocacia',
+    icon: Scale,
+    color: 'from-blue-500 to-indigo-600',
+    bgGradient: 'from-blue-900/40 via-indigo-900/30 to-slate-900/50',
+    accentColor: 'blue',
+    description: 'Sites premium para escritórios de advocacia',
+    features: ['Áreas de Atuação', 'Consulta Online', 'Blog Jurídico', 'Portal do Cliente'],
+    mockupImage: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80',
+    previewUrl: 'https://advmodelobase.vercel.app/',
   },
   {
     id: 'psicologia',
     name: 'Psicologia',
     icon: Brain,
-    color: 'from-violet-500 to-purple-600',
-    bgGradient: 'from-violet-900/40 via-purple-900/30 to-slate-900/50',
-    accentColor: 'violet',
-    description: 'Sites acolhedores para psicólogos e terapeutas',
-    features: ['Agendamento de Sessões', 'Área do Paciente', 'Blog Terapêutico', 'Atendimento Online'],
-    mockupImage: 'https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=800&q=80',
-    previewUrl: 'https://psicomodelo.lovable.app',
+    color: 'from-teal-400 to-emerald-500',
+    bgGradient: 'from-teal-900/40 via-emerald-900/30 to-slate-900/50',
+    accentColor: 'teal',
+    description: 'Acolhimento e profissionalismo para psicólogos e terapeutas',
+    features: ['Agendamento de Sessão', 'Blog de Bem-estar', 'Área do Paciente', 'Recursos Educativos'],
+    mockupImage: psicologiaImg,
+    previewUrl: 'https://psicomodelo.vercel.app/',
   },
   {
     id: 'tabacaria',
     name: 'Tabacaria',
-    icon: Cigarette,
-    color: 'from-stone-500 to-zinc-600',
-    bgGradient: 'from-stone-900/40 via-zinc-900/30 to-neutral-900/50',
-    accentColor: 'stone',
-    description: 'Sites sofisticados para tabacarias e smoke shops',
-    features: ['Catálogo de Produtos', 'Verificação de Idade', 'Pedidos Online', 'Programa de Fidelidade'],
-    mockupImage: 'https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=800&q=80',
+    icon: Flame,
+    color: 'from-amber-600 to-red-700',
+    bgGradient: 'from-amber-950/40 via-red-950/30 to-stone-900/50',
+    accentColor: 'amber',
+    description: 'Elegância e tradição para tabacarias e lounges exclusivos',
+    features: ['Catálogo Premium', 'Reserva de Lounge', 'Clube do Charuto', 'Eventos Exclusivos'],
+    mockupImage: tabacariaImg,
     previewUrl: 'https://sarrfaff-whatsapp-convert.vercel.app/',
   },
   {
-    id: 'roupa',
-    name: 'Moda & Roupa',
-    icon: Shirt,
-    color: 'from-rose-500 to-pink-600',
-    bgGradient: 'from-rose-900/40 via-pink-900/30 to-slate-900/50',
+    id: 'moda',
+    name: 'Loja de Roupas',
+    icon: ShoppingBag,
+    color: 'from-rose-400 to-orange-400',
+    bgGradient: 'from-rose-900/40 via-orange-900/30 to-slate-900/50',
     accentColor: 'rose',
-    description: 'Lojas virtuais elegantes para marcas de moda e vestuário',
-    features: ['Vitrine Digital', 'Carrinho de Compras', 'Guia de Tamanhos', 'Lookbooks Interativos'],
-    mockupImage: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80',
-    previewUrl: 'https://modelodrop.lovable.app',
+    description: 'Vitrines digitais modernas para boutiques e marcas de moda',
+    features: ['Vitrine Virtual', 'Lookbook Interativo', 'Integração Instagram', 'Provador Virtual'],
+    mockupImage: roupasImg,
+    previewUrl: 'https://modelodrop.vercel.app/',
+  },
+  {
+    id: 'imobiliaria',
+    name: 'Imobiliária',
+    icon: Building2,
+    color: 'from-cyan-500 to-blue-600',
+    bgGradient: 'from-cyan-900/40 via-blue-900/30 to-slate-900/50',
+    accentColor: 'cyan',
+    description: 'Portais imobiliários com busca avançada e tour virtual',
+    features: ['Catálogo de Imóveis', 'Busca com Filtros', 'Tour Virtual 360°', 'Simulador de Financiamento'],
+    mockupImage: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80',
+    previewUrl: 'https://amethyst-aura-homes.vercel.app/',
+  },
+  {
+    id: 'estetica',
+    name: 'Estética',
+    icon: Sparkles,
+    color: 'from-pink-500 to-rose-600',
+    bgGradient: 'from-pink-900/40 via-rose-900/30 to-slate-900/50',
+    accentColor: 'pink',
+    description: 'Sites elegantes para clínicas de estética e spas',
+    features: ['Catálogo de Serviços', 'Antes e Depois', 'Agendamento Online', 'Pacotes Promocionais'],
+    mockupImage: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80',
+    previewUrl: 'https://amethyst-aura-homes-2212.vercel.app/',
+  },
+  {
+    id: 'educacao',
+    name: 'Educação',
+    icon: GraduationCap,
+    color: 'from-yellow-500 to-orange-600',
+    bgGradient: 'from-yellow-900/40 via-orange-900/30 to-slate-900/50',
+    accentColor: 'yellow',
+    description: 'Plataformas para escolas, cursos e professores',
+    features: ['Área do Aluno', 'Aulas Online', 'Material Didático', 'Certificados Digitais'],
+    mockupImage: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80',
+    previewUrl: 'https://future-forge-landing.vercel.app/',
+  },
+  {
+    id: 'gastronomia',
+    name: 'Gastronomia',
+    icon: UtensilsCrossed,
+    color: 'from-red-500 to-rose-600',
+    bgGradient: 'from-red-900/40 via-rose-900/30 to-stone-900/50',
+    accentColor: 'red',
+    description: 'Cardápios digitais e sistemas de delivery completos',
+    features: ['Cardápio Digital', 'Pedidos Online', 'Sistema de Reservas', 'Integração iFood'],
+    mockupImage: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
+    previewUrl: 'https://sensory-bread.vercel.app/',
   },
   {
     id: 'saude',
@@ -63,39 +126,6 @@ const niches = [
     mockupImage: 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&q=80',
   },
   {
-    id: 'advocacia',
-    name: 'Advocacia',
-    icon: Scale,
-    color: 'from-blue-500 to-indigo-600',
-    bgGradient: 'from-blue-900/40 via-indigo-900/30 to-slate-900/50',
-    accentColor: 'blue',
-    description: 'Sites premium para escritórios de advocacia',
-    features: ['Áreas de Atuação', 'Consulta Online', 'Blog Jurídico', 'Portal do Cliente'],
-    mockupImage: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80',
-  },
-  {
-    id: 'gastronomia',
-    name: 'Gastronomia',
-    icon: UtensilsCrossed,
-    color: 'from-red-500 to-rose-600',
-    bgGradient: 'from-red-900/40 via-rose-900/30 to-stone-900/50',
-    accentColor: 'red',
-    description: 'Cardápios digitais e sistemas de delivery completos',
-    features: ['Cardápio Digital', 'Pedidos Online', 'Sistema de Reservas', 'Integração iFood'],
-    mockupImage: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
-  },
-  {
-    id: 'imobiliaria',
-    name: 'Imobiliária',
-    icon: Building2,
-    color: 'from-cyan-500 to-blue-600',
-    bgGradient: 'from-cyan-900/40 via-blue-900/30 to-slate-900/50',
-    accentColor: 'cyan',
-    description: 'Portais imobiliários com busca avançada e tour virtual',
-    features: ['Catálogo de Imóveis', 'Busca com Filtros', 'Tour Virtual 360°', 'Simulador de Financiamento'],
-    mockupImage: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80',
-  },
-  {
     id: 'fitness',
     name: 'Academia',
     icon: Dumbbell,
@@ -105,28 +135,6 @@ const niches = [
     description: 'Sites energéticos para academias e personal trainers',
     features: ['Planos e Mensalidades', 'Agendamento de Aulas', 'Área do Aluno', 'Treinos Online'],
     mockupImage: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80',
-  },
-  {
-    id: 'estetica',
-    name: 'Estética',
-    icon: Sparkles,
-    color: 'from-pink-500 to-rose-600',
-    bgGradient: 'from-pink-900/40 via-rose-900/30 to-slate-900/50',
-    accentColor: 'pink',
-    description: 'Sites elegantes para clínicas de estética e spas',
-    features: ['Catálogo de Serviços', 'Antes e Depois', 'Agendamento Online', 'Pacotes Promocionais'],
-    mockupImage: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80',
-  },
-  {
-    id: 'educacao',
-    name: 'Educação',
-    icon: GraduationCap,
-    color: 'from-yellow-500 to-orange-600',
-    bgGradient: 'from-yellow-900/40 via-orange-900/30 to-slate-900/50',
-    accentColor: 'yellow',
-    description: 'Plataformas para escolas, cursos e professores',
-    features: ['Área do Aluno', 'Aulas Online', 'Material Didático', 'Certificados Digitais'],
-    mockupImage: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80',
   },
 ];
 
@@ -165,6 +173,14 @@ const NicheShowcase = () => {
       opacity: 0,
       scale: 0.9,
     }),
+  };
+
+  const handlePreviewClick = () => {
+    if (activeNiche.previewUrl) {
+      window.open(activeNiche.previewUrl, '_blank');
+    } else {
+      setShowModal(true);
+    }
   };
 
   return (
@@ -265,35 +281,18 @@ const NicheShowcase = () => {
                         ))}
                       </motion.div>
 
-                      {activeNiche.previewUrl ? (
-                        <motion.a
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.4 }}
-                          href={activeNiche.previewUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
-                          className="glow-button flex items-center gap-2 w-fit"
-                        >
-                          <ExternalLink size={18} />
-                          Ver Preview Ao Vivo
-                        </motion.a>
-                      ) : (
-                        <motion.button
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.4 }}
-                          onClick={() => setShowModal(true)}
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
-                          className="glow-button flex items-center gap-2 w-fit"
-                        >
-                          <ExternalLink size={18} />
-                          Ver Preview Ao Vivo
-                        </motion.button>
-                      )}
+                      <motion.button
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4 }}
+                        onClick={handlePreviewClick}
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="glow-button flex items-center gap-2 w-fit"
+                      >
+                        <ExternalLink size={18} />
+                        Ver Preview Ao Vivo
+                      </motion.button>
                     </div>
 
                     {/* Right: Mockup Preview */}
@@ -315,7 +314,9 @@ const NicheShowcase = () => {
                               <div className="w-2.5 h-2.5 rounded-full bg-green-500/70" />
                             </div>
                             <div className="flex-1 h-5 bg-muted/60 rounded-md ml-4 flex items-center px-3">
-                              <span className="text-[10px] text-muted-foreground truncate">www.{activeNiche.id}.com.br</span>
+                              <span className="text-[10px] text-muted-foreground truncate">
+                                {activeNiche.previewUrl ? activeNiche.previewUrl.replace('https://', '') : `www.${activeNiche.id}.com.br`}
+                              </span>
                             </div>
                           </div>
                           {/* Screen with Image */}
@@ -367,11 +368,10 @@ const NicheShowcase = () => {
                   setDirection(index > currentIndex ? 1 : -1);
                   setCurrentIndex(index);
                 }}
-                className={`relative w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex
-                    ? 'bg-primary scale-125'
-                    : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
-                }`}
+                className={`relative w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
+                  ? 'bg-primary scale-125'
+                  : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
+                  }`}
               >
                 {index === currentIndex && (
                   <motion.div
@@ -384,35 +384,33 @@ const NicheShowcase = () => {
             ))}
           </div>
 
-          <div className="overflow-x-auto scrollbar-hide mt-6 -mx-4 px-4">
-            <div className="flex justify-start sm:justify-center gap-2 w-max sm:w-full mx-auto">
-              {niches.map((niche, index) => {
-                const Icon = niche.icon;
-                const isActive = index === currentIndex;
-                return (
-                  <button
-                    key={niche.id}
-                    onClick={() => {
-                      setDirection(index > currentIndex ? 1 : -1);
-                      setCurrentIndex(index);
-                    }}
-                    className={`flex items-center gap-2 px-3 py-2 rounded-full transition-all duration-300 whitespace-nowrap shrink-0 ${
-                      isActive
-                        ? 'glass-card border-primary/50 text-foreground'
-                        : 'text-muted-foreground hover:text-foreground hover:bg-muted/30'
+          {/* Niche Quick Nav */}
+          <div className="flex justify-center gap-2 mt-6 flex-wrap">
+            {niches.map((niche, index) => {
+              const Icon = niche.icon;
+              const isActive = index === currentIndex;
+              return (
+                <button
+                  key={niche.id}
+                  onClick={() => {
+                    setDirection(index > currentIndex ? 1 : -1);
+                    setCurrentIndex(index);
+                  }}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${isActive
+                    ? 'glass-card border-primary/50 text-foreground'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-muted/30'
                     }`}
-                  >
-                    <Icon size={16} className={`shrink-0 ${isActive ? 'text-secondary' : ''}`} />
-                    <span className="text-xs sm:text-sm font-medium">{niche.name}</span>
-                  </button>
-                );
-              })}
-            </div>
+                >
+                  <Icon size={16} className={isActive ? 'text-secondary' : ''} />
+                  <span className="text-sm font-medium hidden sm:inline">{niche.name}</span>
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>
 
-      {/* Modal */}
+      {/* Modal code would go here but we mostly use direct links now */}
       <AnimatePresence>
         {showModal && (
           <motion.div

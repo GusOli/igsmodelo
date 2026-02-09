@@ -53,9 +53,9 @@ const HeroSection = () => {
                 <Layers size={20} />
                 Ver Modelos Prontos
               </motion.a>
-              
+
               <motion.a
-                href="https://wa.me/5511999999999"
+                href="https://wa.me/5544999506367?text=Olá! Gostaria de falar no WhatsApp."
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
@@ -98,7 +98,7 @@ const HeroSection = () => {
           >
             <div className="relative">
               <WireframeCube />
-              
+
               {/* Floating Elements */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
@@ -107,7 +107,7 @@ const HeroSection = () => {
               >
                 <span className="text-secondary">Next.js</span>
               </motion.div>
-              
+
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
@@ -115,7 +115,7 @@ const HeroSection = () => {
               >
                 <span className="text-primary">React</span>
               </motion.div>
-              
+
               <motion.div
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 3, repeat: Infinity, delay: 1 }}
