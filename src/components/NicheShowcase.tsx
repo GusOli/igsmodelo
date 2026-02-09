@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Scissors, Stethoscope, Scale, UtensilsCrossed, ChevronLeft, ChevronRight, X, ExternalLink, Building2, Dumbbell, Sparkles, GraduationCap } from 'lucide-react';
+import { Scissors, Stethoscope, Scale, UtensilsCrossed, ChevronLeft, ChevronRight, X, ExternalLink, Building2, Dumbbell, Sparkles, GraduationCap, Brain, Cigarette, Shirt } from 'lucide-react';
 
 const niches = [
   {
@@ -13,6 +13,43 @@ const niches = [
     description: 'Sites modernos para barbearias e salões de beleza masculino',
     features: ['Agendamento Online 24/7', 'Galeria de Cortes', 'Preços Dinâmicos', 'Avaliações de Clientes'],
     mockupImage: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&q=80',
+    previewUrl: 'https://modelobarber.lovable.app',
+  },
+  {
+    id: 'psicologia',
+    name: 'Psicologia',
+    icon: Brain,
+    color: 'from-violet-500 to-purple-600',
+    bgGradient: 'from-violet-900/40 via-purple-900/30 to-slate-900/50',
+    accentColor: 'violet',
+    description: 'Sites acolhedores para psicólogos e terapeutas',
+    features: ['Agendamento de Sessões', 'Área do Paciente', 'Blog Terapêutico', 'Atendimento Online'],
+    mockupImage: 'https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=800&q=80',
+    previewUrl: 'https://psicomodelo.lovable.app',
+  },
+  {
+    id: 'tabacaria',
+    name: 'Tabacaria',
+    icon: Cigarette,
+    color: 'from-stone-500 to-zinc-600',
+    bgGradient: 'from-stone-900/40 via-zinc-900/30 to-neutral-900/50',
+    accentColor: 'stone',
+    description: 'Sites sofisticados para tabacarias e smoke shops',
+    features: ['Catálogo de Produtos', 'Verificação de Idade', 'Pedidos Online', 'Programa de Fidelidade'],
+    mockupImage: 'https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=800&q=80',
+    previewUrl: 'https://sarrfaff-whatsapp-convert.vercel.app/',
+  },
+  {
+    id: 'roupa',
+    name: 'Moda & Roupa',
+    icon: Shirt,
+    color: 'from-rose-500 to-pink-600',
+    bgGradient: 'from-rose-900/40 via-pink-900/30 to-slate-900/50',
+    accentColor: 'rose',
+    description: 'Lojas virtuais elegantes para marcas de moda e vestuário',
+    features: ['Vitrine Digital', 'Carrinho de Compras', 'Guia de Tamanhos', 'Lookbooks Interativos'],
+    mockupImage: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80',
+    previewUrl: 'https://modelodrop.lovable.app',
   },
   {
     id: 'saude',
@@ -228,18 +265,35 @@ const NicheShowcase = () => {
                         ))}
                       </motion.div>
 
-                      <motion.button
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4 }}
-                        onClick={() => setShowModal(true)}
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        className="glow-button flex items-center gap-2 w-fit"
-                      >
-                        <ExternalLink size={18} />
-                        Ver Preview Ao Vivo
-                      </motion.button>
+                      {activeNiche.previewUrl ? (
+                        <motion.a
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.4 }}
+                          href={activeNiche.previewUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          className="glow-button flex items-center gap-2 w-fit"
+                        >
+                          <ExternalLink size={18} />
+                          Ver Preview Ao Vivo
+                        </motion.a>
+                      ) : (
+                        <motion.button
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.4 }}
+                          onClick={() => setShowModal(true)}
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          className="glow-button flex items-center gap-2 w-fit"
+                        >
+                          <ExternalLink size={18} />
+                          Ver Preview Ao Vivo
+                        </motion.button>
+                      )}
                     </div>
 
                     {/* Right: Mockup Preview */}
