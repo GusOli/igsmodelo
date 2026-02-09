@@ -384,29 +384,30 @@ const NicheShowcase = () => {
             ))}
           </div>
 
-          {/* Niche Quick Nav */}
-          <div className="flex justify-center gap-2 mt-6">
-            {niches.map((niche, index) => {
-              const Icon = niche.icon;
-              const isActive = index === currentIndex;
-              return (
-                <button
-                  key={niche.id}
-                  onClick={() => {
-                    setDirection(index > currentIndex ? 1 : -1);
-                    setCurrentIndex(index);
-                  }}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${
-                    isActive
-                      ? 'glass-card border-primary/50 text-foreground'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-muted/30'
-                  }`}
-                >
-                  <Icon size={16} className={isActive ? 'text-secondary' : ''} />
-                  <span className="text-sm font-medium hidden sm:inline">{niche.name}</span>
-                </button>
-              );
-            })}
+          <div className="overflow-x-auto scrollbar-hide mt-6 -mx-4 px-4">
+            <div className="flex justify-start sm:justify-center gap-2 w-max sm:w-full mx-auto">
+              {niches.map((niche, index) => {
+                const Icon = niche.icon;
+                const isActive = index === currentIndex;
+                return (
+                  <button
+                    key={niche.id}
+                    onClick={() => {
+                      setDirection(index > currentIndex ? 1 : -1);
+                      setCurrentIndex(index);
+                    }}
+                    className={`flex items-center gap-2 px-3 py-2 rounded-full transition-all duration-300 whitespace-nowrap shrink-0 ${
+                      isActive
+                        ? 'glass-card border-primary/50 text-foreground'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-muted/30'
+                    }`}
+                  >
+                    <Icon size={16} className={`shrink-0 ${isActive ? 'text-secondary' : ''}`} />
+                    <span className="text-xs sm:text-sm font-medium">{niche.name}</span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
