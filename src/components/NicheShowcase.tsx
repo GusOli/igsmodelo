@@ -15,7 +15,7 @@ const niches = [
     accentColor: 'amber',
     description: 'Sites modernos para barbearias e salões de beleza masculino',
     features: ['Agendamento Online 24/7', 'Galeria de Cortes', 'Preços Dinâmicos', 'Avaliações de Clientes'],
-    mockupImage: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&q=80',
+    mockupImage: 'assets/barbearia.png',
     previewUrl: 'https://modelobarber.vercel.app/',
   },
   {
