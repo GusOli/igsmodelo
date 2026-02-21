@@ -18,10 +18,126 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@Lovable" />
   <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "IGS Soluções Digitais",
+        "url": "https://www.igsolutions.online/",
+        "logo": "https://www.igsolutions.online/logo-igs.jpg",
+        "image": "https://www.igsolutions.online/logo-igs.jpg",
+        "description": "Transforme seu negócio com um site de alta conversão. Sites premium para Barbearias, Clínicas, Advogados e Delivery.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Maringá",
+          "addressRegion": "PR",
+          "addressCountry": "BR"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+55-44-99973-7863",
+          "contactType": "sales",
+          "areaServed": "BR",
+          "availableLanguage": "Portuguese"
+        },
+        "sameAs": [
+          "https://www.instagram.com/igs_solution/"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "IGS Soluções Digitais",
+        "url": "https://www.igsolutions.online/"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "IGS Soluções Digitais",
+        "image": "https://www.igsolutions.online/logo-igs.jpg",
+        "@id": "https://www.igsolutions.online/",
+        "url": "https://www.igsolutions.online/",
+        "telephone": "+55-44-99973-7863",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Maringá",
+          "addressLocality": "Maringá",
+          "addressRegion": "PR",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -23.4209,
+          "longitude": -51.9331
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      }
+    ]
+  </script>
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <!-- Pre-rendered content for SEO and No-JS users -->
+    <header style="display:none">
+      <div>IGS Soluções Digitais</div>
+      <p>Transforme Visitantes em Clientes com Design de Outro Mundo</p>
+    </header>
+    <main>
+      <section>
+        <h1>Transforme Visitantes em <span class="gradient-text">Clientes</span> com Design de Outro Mundo</h1>
+        <p>Sites ultra-rápidos e visuais para Barbearias, Clínicas, Advogados e Delivery. Prontos em 48h.</p>
+        <div class="features">
+          <ul>
+            <li>+200 Sites Entregues</li>
+            <li>98% Satisfação</li>
+            <li>Suporte 24/7</li>
+          </ul>
+        </div>
+      </section>
+      <section id="servicos">
+        <h2>Nossas Soluções</h2>
+        <ul>
+          <li>Barbearia</li>
+          <li>Advocacia</li>
+          <li>Psicologia</li>
+          <li>Tabacaria</li>
+          <li>Loja de Roupas</li>
+          <li>Imobiliária</li>
+          <li>Estética</li>
+          <li>Educação</li>
+          <li>Gastronomia</li>
+        </ul>
+      </section>
+      <footer>
+        <p>© 2026 IGS Soluções Digitais. Todos os direitos reservados.</p>
+        <p>Contato: (44) 99973-7863 | Maringá, PR - Brasil</p>
+      </footer>
+    </main>
+    <noscript>
+      <div style="padding: 20px; text-align: center; background-color: #1a1a1a; color: white;">
+        Para uma melhor experiência, por favor ative o JavaScript no seu navegador.
+        Este site utiliza tecnologias modernas que dependem de JavaScript.
+      </div>
+    </noscript>
+  </div>
+
   <script type="module" src="/src/main.tsx"></script>
 </body>
 

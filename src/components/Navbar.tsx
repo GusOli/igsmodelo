@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto">
         <div className="glass-card px-6 py-3 flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
+          <a href="#" className="flex items-center gap-3" aria-label="Home - IGS Soluções Digitais">
             <img src={logo} alt="IGS Soluções Digitais" className="w-10 h-10 rounded-full" />
             <span className="font-display font-bold text-lg hidden sm:block">
               <span className="gradient-text">IGS</span>
@@ -60,6 +60,8 @@ const Navbar = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-foreground p-2"
+            aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={isOpen}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

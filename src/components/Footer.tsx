@@ -30,6 +30,7 @@ const Footer = () => {
                   href="https://www.instagram.com/igs_solution/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Siga-nos no Instagram"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   className="p-2.5 glass-card hover:border-primary/50 transition-colors"

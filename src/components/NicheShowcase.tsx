@@ -211,19 +211,27 @@ const NicheShowcase = () => {
           {/* Navigation Arrows */}
           <button
             onClick={() => paginate(-1)}
+            aria-label="Modelo anterior"
             className="absolute left-0 md:-left-6 top-1/2 -translate-y-1/2 z-20 p-3 md:p-4 glass-card hover:bg-primary/20 transition-all duration-300 group"
           >
             <ChevronLeft size={24} className="text-muted-foreground group-hover:text-primary transition-colors" />
           </button>
           <button
             onClick={() => paginate(1)}
+            aria-label="Próximo modelo"
             className="absolute right-0 md:-right-6 top-1/2 -translate-y-1/2 z-20 p-3 md:p-4 glass-card hover:bg-primary/20 transition-all duration-300 group"
           >
             <ChevronRight size={24} className="text-muted-foreground group-hover:text-primary transition-colors" />
           </button>
 
           {/* Main Carousel Card */}
-          <div className="relative h-[600px] md:h-[500px] overflow-hidden mx-8 md:mx-16">
+          <div
+            className="relative h-[600px] md:h-[500px] overflow-hidden mx-8 md:mx-16"
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Showcase de modelos por nicho"
+          >
+
             <AnimatePresence initial={false} custom={direction} mode="wait">
               <motion.div
                 key={activeNiche.id}
